@@ -10,10 +10,13 @@ chmod -R 600 /home/cahlan/.ssh/
 chmod 700 /home/cahlan/.ssh
 echo "cahlan ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/cahlan
 su cahlan
-touch ~/.bash_profile
+cd $HOME
+touch .bash_profile
 sudo apt-get update
 sudo apt-get install git -y
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 nvm install node
+sudo apt-get install zsh -y
+sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 echo "all done!"
