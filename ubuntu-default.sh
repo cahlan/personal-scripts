@@ -1,3 +1,5 @@
+#!/bin/bash
+
 useradd -m -s /bin/bash -U cahlan
 addgroup admin
 adduser cahlan admin
@@ -15,6 +17,7 @@ touch .bash_profile
 sudo apt-get update
 sudo apt-get install git -y
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
 nvm install node
 sudo apt-get install zsh -y
 sudo chsh -s $(which zsh)
