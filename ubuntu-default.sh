@@ -9,4 +9,9 @@ chown -R cahlan /home/cahlan/.ssh
 chmod -R 600 /home/cahlan/.ssh/
 chmod 700 /home/cahlan/.ssh
 echo "cahlan ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/cahlan
+su cahlan
+sudo apt-get update
+sudo apt-get install git -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+nvm install node
 echo "all done!"
