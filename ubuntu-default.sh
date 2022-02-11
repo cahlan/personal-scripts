@@ -8,4 +8,4 @@ chgrp -R cahlan /home/cahlan/.ssh
 chown -R cahlan /home/cahlan/.ssh
 chmod -R 600 /home/cahlan/.ssh/
 chmod 700 /home/cahlan/.ssh
-echo "%admin ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/admin
+echo "cahlan ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/cahlan
